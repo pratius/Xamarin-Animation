@@ -148,6 +148,93 @@
     <BundleResource Include="Resources\tab_feed%402x.png" />
     <BundleResource Include="Resources\tab_feed%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\About_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Battery_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Chat_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CommandLine_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DoubleDown_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DoubleDown_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DoubleDown_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DoubleLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DoubleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DoubleUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Filter_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Map_Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MessageFilled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Microphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MoneyBag_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Report_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Save_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Timeline_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\UpIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\USBConnected_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VideoCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xamconsulting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Menu_button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

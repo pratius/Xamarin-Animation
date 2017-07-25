@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.Views.MenusPage"
+              Padding="0,40,0,0"
+             Icon="Menu_button"
+             BackgroundColor="#3A4551">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuItem" TargetType="Image">
+                <Setter Property="Margin" Value="5,10" />
+            </Style>
+            <Style x:Key="LstIconImage" TargetType="Image">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="15,0" />
+            </Style>
+            <Style x:Key="LblMenuItem" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+           
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Style="{StaticResource StackMenuStyle}" >
+        <ListView x:Name="LvMenuList" ItemsSource="{Binding MenuList}" AutomationId="lstMenu">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Style="{StaticResource MenuItem}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Style="{StaticResource LstIconImage}" Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Style="{StaticResource LblMenuItem}" Text="{Binding Title}"  />
+                            
+                        </Grid>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
