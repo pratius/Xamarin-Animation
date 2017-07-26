@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DemoApp.Views.MenusPage"
               Padding="0,40,0,0"
              Icon="Menu_button"
-             BackgroundColor="#3A4551">
+             BackgroundColor="#3A4551" Title="Menu">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="MenuItem" TargetType="Image">
@@ -36,8 +36,7 @@
                                 <ColumnDefinition Width="40"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Image Grid.Column="0" Style="{StaticResource LstIconImage}" Source="{Binding IconSource}" />
-                            <Label Grid.Column="1" Style="{StaticResource LblMenuItem}" Text="{Binding Title}"  />
-                            
+                            <Label Grid.Column="1" Style="{StaticResource LblMenuItem}" Text="{Binding Title}"  /> 
                         </Grid>
                         
                     </ViewCell>

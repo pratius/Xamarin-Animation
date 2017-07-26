@@ -34,6 +34,38 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="profile_generic.png" width="95" height="95"/>
+        <image name="slideout.png" width="14" height="15"/>
+        <image name="tab_about.png" width="32" height="30"/>
+        <image name="tab_feed.png" width="32" height="30"/>
+        <image name="About_Blue.png" width="50" height="50"/>
+        <image name="Battery_Blue.png" width="50" height="50"/>
+        <image name="Chat_Blue.png" width="50" height="50"/>
+        <image name="CommandLine_Blue.png" width="50" height="50"/>
+        <image name="dog.jpg" width="496" height="280"/>
+        <image name="DoubleDown_Black.png" width="50" height="50"/>
+        <image name="DoubleDown_Blue.png" width="50" height="50"/>
+        <image name="DoubleDown_White.png" width="50" height="50"/>
+        <image name="DoubleLeft.png" width="50" height="50"/>
+        <image name="DoubleRight.png" width="50" height="50"/>
+        <image name="DoubleUp.png" width="50" height="50"/>
+        <image name="Enter.png" width="50" height="50"/>
+        <image name="Filter_Blue.png" width="25" height="25"/>
+        <image name="Happy.png" width="50" height="50"/>
+        <image name="Home.png" width="50" height="50"/>
+        <image name="Map_Background.png" width="470" height="711"/>
+        <image name="MessageFilled.png" width="50" height="50"/>
+        <image name="Microphone.png" width="50" height="50"/>
+        <image name="MoneyBag_Blue.png" width="50" height="50"/>
+        <image name="Pencil.png" width="50" height="50"/>
+        <image name="Report_Blue.png" width="50" height="50"/>
+        <image name="Save_Blue.png" width="50" height="50"/>
+        <image name="Settings.png" width="50" height="50"/>
+        <image name="Timeline_Blue.png" width="50" height="50"/>
+        <image name="UpIcon.png" width="32" height="9"/>
+        <image name="USBConnected_Color.png" width="50" height="50"/>
+        <image name="VideoCall.png" width="50" height="50"/>
+        <image name="xamconsulting.png" width="400" height="134"/>
+        <image name="Menu_button.png" width="46" height="46"/>
     </resources>
 </document>

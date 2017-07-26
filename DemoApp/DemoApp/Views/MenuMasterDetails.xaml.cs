@@ -3,113 +3,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DemoApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace DemoApp.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+   
     public partial class MenuMasterDetails : MasterDetailPage
     {
         public MenuMasterDetails()
         {
             InitializeComponent();
             masterMenuPage.ListView.ItemSelected += ListView_ItemSelected;
-        }
+            Detail = new NavigationPage(new DashboardPage());
+
+		}
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             try
             {
-                var item = e.SelectedItem as MenuItem;
+                var item = e.SelectedItem as Models.Menus;
                 if (item != null)
                 {
-                    //For Help Page Navigation should be not like master details Page.
-                    if (item.RequestedPage == ApplicationActivity.HelpPage)
-                    {
-                        IsPresented = false;
-                        await Detail.Navigation.PushCustAsync(new Pages.HelpPage());
-                        masterMenuPage.ListView.SelectedItem = null;
-                        return;
-                    }
-
-                    IsPresented = false;
-                    await Task.Yield();
-                    detailPageType = GetPageToDisplay(item.RequestedPage);
-                    ShowDetailPage();
+                    
+                  GetPageToDisplay(e.SelectedItem as Models.Menus);
+                   
                 }
             }
             catch (Exception ex)
             {
-                Helper.LogException(ex, "OnItemSelected", "MainPage ");
+             
             }
 
         }
 
-        private Type GetPageToDisplay(ApplicationActivity page)
+        private void GetPageToDisplay(Menus menu)
         {
-            var result = typeof(HubManagementPage);
-            if (Cache.GetNewCommonAppDbObject().ApplicationUser_Get().IsActive)
+			if (menu == null)
+				return;
+            if (menu.Title == "Home")
             {
-                switch (page)
-                {
-                    case ApplicationActivity.HubManagementPage:
-                        result = typeof(HubManagementPage);
-                        break;
-                    case ApplicationActivity.NotificationCentrePage:
-                        result = typeof(Pages.NotificationCentre.NotificationCentrePage);
-                        break;
-                    case ApplicationActivity.DeviceManagementPage:
-                        result = typeof(Pages.DeviceManagement.DeviceManagementPage);
-                        break;
-                    case ApplicationActivity.ServiceModePage:
-                        result = typeof(Pages.ServiceMode.ServiceModePage);
-                        break;
-                    case ApplicationActivity.UsersPage:
-                        result = typeof(Pages.UserAccounts.UsersPage);
-                        break;
-                    case ApplicationActivity.AccountSettingsPage:
-                        result = typeof(Pages.UserAccounts.AccountSettingsPage);
-                        break;
-                    case ApplicationActivity.AboutPage:
-                        result = typeof(Pages.AboutPage);
-                        break;
-                    case ApplicationActivity.HelpPage:
-                        result = typeof(Pages.HelpPage);
-                        break;
-                    case ApplicationActivity.SignOutPage:
-                        result = typeof(Pages.UserAccounts.SignOutPage);
-                        break;
-                    case ApplicationActivity.ServiceEngineerDefaultPage:
-                        result = typeof(Pages.ServiceEngineer.ServiceModeSelectOptionPage);
-                        break;
-                    case ApplicationActivity.Sample:
-                        result = typeof(SampleGauge);
-                        break;
-                }
+                Detail = new NavigationPage(new DashboardPage());
             }
-            else
+            else if (menu.Title == "Leads")
             {
-                result = typeof(Pages.UserAccounts.InActiveUserPage);
-                switch (page)
-                {
-                    case ApplicationActivity.AccountSettingsPage:
-                        result = typeof(Pages.UserAccounts.AccountSettingsPage);
-                        break;
-                    case ApplicationActivity.AboutPage:
-                        result = typeof(Pages.AboutPage);
-                        break;
-                    case ApplicationActivity.HelpPage:
-                        result = typeof(Pages.HelpPage);
-                        break;
-                    case ApplicationActivity.SignOutPage:
-                        result = typeof(Pages.UserAccounts.SignOutPage);
-                        break;
-                }
+                Detail = new NavigationPage(new DashboardPage());
             }
-
-            return result;
+            else if (menu.Title == "Signin")
+            {
+                Detail = new NavigationPage(new DashboardPage());
+            }
+            else if (menu.Title == "Signup")
+            {
+                Detail = new NavigationPage(new DashboardPage());
+            }
         }
     }
 }

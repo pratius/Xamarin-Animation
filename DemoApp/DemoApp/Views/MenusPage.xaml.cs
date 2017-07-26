@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace DemoApp.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+  
     public partial class MenusPage : ContentPage
     {
         public ListView ListView { get { return LvMenuList; } }
