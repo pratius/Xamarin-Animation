@@ -14,6 +14,8 @@ namespace DemoApp.Views
     public partial class DashboardPage : ContentPage
     {
         
+
+
         public DashboardPage()
         {
             InitializeComponent();
@@ -30,6 +32,11 @@ namespace DemoApp.Views
         async void Handle_Scrolled(object sender, Xamarin.Forms.ScrolledEventArgs e)
 		{
             await this.ColorTo(Color.FromRgb(0, 0, 0), Color.FromRgb(255, 255, 255), c => BackgroundColor = c, 5000);
+		}
+
+		void Handle_Tapped(object sender , System.EventArgs e)
+		{
+            Navigation.PushAsync(new ReportPage());
 		}
 
 	}

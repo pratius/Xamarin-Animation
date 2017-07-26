@@ -139,6 +139,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\profile_generic.png" />
     <AndroidResource Include="Resources\drawable\a01.png" />
     <AndroidResource Include="Resources\layout\splashLayout.axml" />
+    <AndroidResource Include="Resources\drawable\Report.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DemoApp\DemoApp.csproj">

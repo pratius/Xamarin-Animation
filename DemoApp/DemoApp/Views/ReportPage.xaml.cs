@@ -10,6 +10,7 @@ namespace DemoApp.Views
         public ReportPage()
         {
             InitializeComponent();
+            this.BindingContext = new ViewModels.ReportViewModel();
         }
     }
 }

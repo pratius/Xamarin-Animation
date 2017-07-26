@@ -14,6 +14,7 @@ namespace DemoApp.Helpers
 							   fromColor.B + t * (toColor.B - fromColor.B),
 							   fromColor.A + t * (toColor.A - fromColor.A));
 			return ColorAnimation(self, "ColorTo", transform, callback, length, easing);
+
 		}
 
 		public static void CancelAnimation(this VisualElement self)
@@ -45,21 +46,7 @@ namespace DemoApp.Helpers
 				time--;
 			} while (time != 0);
 
-			/*
-            await view.TranslateTo(view.TranslationX, view.TranslationY - 50, 500, Easing.Linear);
-
-            await view.TranslateTo(view.TranslationX, view.TranslationY + 50, 300, Easing.Linear);
-
-            await view.TranslateTo(view.TranslationX, view.TranslationY - 20, 300, Easing.Linear);
-
-            await view.TranslateTo(view.TranslationX, view.TranslationY + 20, 150, Easing.Linear);
-
-            await view.TranslateTo(view.TranslationX, view.TranslationY - 10, 150, Easing.Linear);
-
-            await view.TranslateTo(view.TranslationX, view.TranslationY + 10, 100, Easing.Linear);
-
-            await view.FadeTo(-0, 1000);
-            */
+			
 		}
 	}
 }
