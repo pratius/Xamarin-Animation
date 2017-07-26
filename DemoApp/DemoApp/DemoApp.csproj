@@ -62,6 +62,9 @@
     <Compile Include="Models\Zoo.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="Helpers\Animate.cs" />
+    <Compile Include="Views\MoneyPage.xaml.cs">
+      <DependentUpon>MoneyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SplashScreenPage.xaml.cs">
       <DependentUpon>SplashScreenPage.xaml</DependentUpon>
     </Compile>
@@ -89,7 +92,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MoneyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MenusPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

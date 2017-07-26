@@ -8,8 +8,11 @@ namespace DemoApp
 {
     public partial class App : Application
     {
+        public static uint AnimationSpeed = 250;
+        public static int DelaySpeed = 300;
         public App()
         {
+
             InitializeComponent();
             var navigationPage = new NavigationPage(new Views.SplashScreenPage());
            

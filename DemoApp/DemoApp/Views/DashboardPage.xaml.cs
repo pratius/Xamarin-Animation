@@ -19,12 +19,14 @@ namespace DemoApp.Views
             NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new DashboardViewModel();
             Animation();
+            
         }
 
         private async void Animation()
         {
             scrollView.Opacity = 0;
             await scrollView.FadeTo(1, 5000);
+           // await buttonStack.ScaleTo(1, 250, Easing.SinIn);
         }
 
         async void Handle_Scrolled(object sender, Xamarin.Forms.ScrolledEventArgs e)
@@ -32,10 +34,14 @@ namespace DemoApp.Views
             await this.ColorTo(Color.FromRgb(255,255, 255), Color.FromRgb(226, 71, 71), c => BackgroundColor = c, 5000);
 		}
 
-		void Handle_Tapped(object sender , System.EventArgs e)
+	async	void Handle_Tapped(object sender , System.EventArgs e)
 		{
-            Navigation.PushAsync(new ReportPage());
+           await Navigation.PushAsync(new ReportPage());
 		}
 
-	}
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+           await Navigation.PushAsync(new MoneyPage());
+        }
+    }
 }
