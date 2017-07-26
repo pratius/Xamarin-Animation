@@ -28,7 +28,7 @@
             </cv:CarouselView.ItemTemplate>
           </cv:CarouselView>
         </Grid>
-       <ScrollView Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" x:Name="scrollView">
+       <ScrollView Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" x:Name="scrollView" Scrolled="Handle_Scrolled">
           <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />

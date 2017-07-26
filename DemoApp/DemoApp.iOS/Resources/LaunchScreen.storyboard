@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="a01.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
                                 <rect key="frame" x="270" y="270" width="60" height="60"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
@@ -67,5 +67,6 @@
         <image name="VideoCall.png" width="50" height="50"/>
         <image name="xamconsulting.png" width="400" height="134"/>
         <image name="Menu_button.png" width="46" height="46"/>
+        <image name="a01.png" width="128" height="128"/>
     </resources>
 </document>

@@ -12,7 +12,7 @@ namespace DemoApp
         {
             InitializeComponent();
 
-            MainPage =new NavigationPage(new DashboardPage());
+            MainPage = new SplashScreenPage();
         }
 
     
