@@ -24,7 +24,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout Style="{StaticResource StackMenuStyle}" >
+    <StackLayout>
         <ListView x:Name="LvMenuList" ItemsSource="{Binding MenuList}" AutomationId="lstMenu">
             <ListView.ItemTemplate>
                 <DataTemplate>

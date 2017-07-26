@@ -17,7 +17,7 @@ namespace DemoApp.Views
             base.OnAppearing();
             await Animate.BallAnimate(this.logoImage, 50, 10, 5);
 			
-            await Navigation.PushModalAsync(new DashboardPage());
+            await Navigation.PushAsync(new DashboardPage());
         }
     }
 }

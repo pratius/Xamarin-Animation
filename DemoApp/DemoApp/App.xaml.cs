@@ -11,8 +11,10 @@ namespace DemoApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new SplashScreenPage();
+            var navigationPage = new NavigationPage(new Views.SplashScreenPage());
+           
+            MainPage = navigationPage;
+           
         }
 
     

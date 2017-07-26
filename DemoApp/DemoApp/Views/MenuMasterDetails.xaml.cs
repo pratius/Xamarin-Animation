@@ -10,15 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace DemoApp.Views
 {
    
-    public partial class MenuMasterDetails : MasterDetailPage
+    public partial class MenuMasterDetails
     {
         public MenuMasterDetails()
         {
             InitializeComponent();
             masterMenuPage.ListView.ItemSelected += ListView_ItemSelected;
-            Detail = new NavigationPage(new DashboardPage());
+            NavigationPage.SetHasNavigationBar(this, false);
+            Detail = new NavigationPage(new Views.DashboardPage());
 
-		}
+        }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -27,9 +28,11 @@ namespace DemoApp.Views
                 var item = e.SelectedItem as Models.Menus;
                 if (item != null)
                 {
-                    
-                  GetPageToDisplay(e.SelectedItem as Models.Menus);
-                   
+
+                    Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                    masterMenuPage.ListView.SelectedItem = null;
+                    IsPresented = false;
+
                 }
             }
             catch (Exception ex)
@@ -37,28 +40,6 @@ namespace DemoApp.Views
              
             }
 
-        }
-
-        private void GetPageToDisplay(Menus menu)
-        {
-			if (menu == null)
-				return;
-            if (menu.Title == "Home")
-            {
-                Detail = new NavigationPage(new DashboardPage());
-            }
-            else if (menu.Title == "Leads")
-            {
-                Detail = new NavigationPage(new DashboardPage());
-            }
-            else if (menu.Title == "Signin")
-            {
-                Detail = new NavigationPage(new DashboardPage());
-            }
-            else if (menu.Title == "Signup")
-            {
-                Detail = new NavigationPage(new DashboardPage());
-            }
         }
     }
 }

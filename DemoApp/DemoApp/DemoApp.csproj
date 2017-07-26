@@ -51,12 +51,14 @@
     <Compile Include="Views\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuMasterDetails.xaml.cs">
+    <EmbeddedResource Include="Views\MenuMasterDetails.xaml.cs">
       <DependentUpon>MenuMasterDetails.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MenusPage.xaml.cs">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenusPage.xaml.cs">
       <DependentUpon>MenusPage.xaml</DependentUpon>
-    </Compile>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <Compile Include="Models\Zoo.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="Helpers\Animate.cs" />

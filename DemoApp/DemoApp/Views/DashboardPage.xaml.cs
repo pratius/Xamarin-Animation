@@ -13,12 +13,10 @@ namespace DemoApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardPage : ContentPage
     {
-        
-
-
         public DashboardPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new DashboardViewModel();
             Animation();
         }
@@ -31,7 +29,7 @@ namespace DemoApp.Views
 
         async void Handle_Scrolled(object sender, Xamarin.Forms.ScrolledEventArgs e)
 		{
-            await this.ColorTo(Color.FromRgb(0, 0, 0), Color.FromRgb(255, 255, 255), c => BackgroundColor = c, 5000);
+            await this.ColorTo(Color.FromRgb(255,255, 255), Color.FromRgb(226, 71, 71), c => BackgroundColor = c, 5000);
 		}
 
 		void Handle_Tapped(object sender , System.EventArgs e)

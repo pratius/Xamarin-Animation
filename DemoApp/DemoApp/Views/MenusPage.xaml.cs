@@ -17,6 +17,7 @@ namespace DemoApp.Views
         public MenusPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             this.BindingContext = new MenuViewModel();
            
         }
