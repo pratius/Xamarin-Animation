@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoApp.Views.Money">
+	<ContentPage.Content>
+    
+         <Grid VerticalOptions="Fill" HorizontalOptions="Fill" Padding="24">
+            <Grid.RowDefinitions>
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".1*" />    
+        </Grid.RowDefinitions>
+        <StackLayout x:Name="label1" Padding="24,0" VerticalOptions="Center">
+            <Label AutomationId="label1" Text="Report traffic Accident"
+                    FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+
+        <StackLayout x:Name="label2" Grid.Row="1" Padding="24,0" VerticalOptions="Center">
+            <Label AutomationId="label2" Text="We are all Police" FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+             <StackLayout x:Name="label3" Padding="24,0" VerticalOptions="Center" Grid.Row="2">
+            <Label AutomationId="label1" Text="Good Conduct Certification"
+                    FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+
+        <StackLayout x:Name="label4" Grid.Row="3" Padding="24,0" VerticalOptions="Center">
+            <Label AutomationId="label2" Text="Night Work Permit" FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+            
+             <StackLayout Grid.Row="4" x:Name="label5" Padding="24,0" VerticalOptions="Center">
+            <Label AutomationId="label1" Text="Fine Payment"
+                    FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+
+        <StackLayout x:Name="label6" Grid.Row="5" Padding="24,0" VerticalOptions="Center">
+            <Label AutomationId="label2" Text="Home Security" FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+
+            <StackLayout x:Name="label7" Grid.Row="6" Padding="24,0" VerticalOptions="Center">
+            <Label AutomationId="label2" Text="Visit Inmate" FontSize="Medium" XAlign="Center" />
+        </StackLayout>
+    </Grid>
+	</ContentPage.Content>
+</ContentPage>

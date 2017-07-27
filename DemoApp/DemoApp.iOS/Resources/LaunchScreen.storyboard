@@ -68,5 +68,7 @@
         <image name="xamconsulting.png" width="400" height="134"/>
         <image name="Menu_button.png" width="46" height="46"/>
         <image name="a01.png" width="128" height="128"/>
+        <image name="Report.png" width="128" height="128"/>
+        <image name="Camera.png" width="128" height="128"/>
     </resources>
 </document>

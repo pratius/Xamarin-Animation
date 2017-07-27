@@ -9,9 +9,11 @@
             <RowDefinition Height=".5*" />
             <RowDefinition Height=".1*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
            <Grid>
-            <cv:CarouselView x:Name="CarouselZoos" ItemsSource="{Binding Zoos}" >
+            <cv:CarouselView  x:Name="CarouselZoos" ItemsSource="{Binding Zoos}" >
             <cv:CarouselView.ItemTemplate>
               <DataTemplate>
                 <Grid>
@@ -55,9 +57,7 @@
         </StackLayout>
         <StackLayout Orientation="Vertical" Grid.Column="1" Grid.Row="0">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
-                Tapped="TapGestureRecognizer_Tapped"
-                />
+                           <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  />
                         </StackLayout.GestureRecognizers>
                         <Image Source="MoneyBag_Blue.png" WidthRequest="50" HeightRequest="50" />
             <Label Text="Money" XAlign="Center" WidthRequest="100" HeightRequest="50"/>
@@ -129,6 +129,9 @@
        
     </Grid>
         </ScrollView>
-    </Grid>
-        </ContentPage.Content>
+      <Grid Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" x:Name="grvCamera">
+      <Image Source="Camera"  Aspect="AspectFit" HeightRequest="40" WidthRequest="40"/>
+      </Grid>        
+      </Grid>
+    </ContentPage.Content>
 </ContentPage>

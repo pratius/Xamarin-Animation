@@ -14,7 +14,6 @@ namespace DemoApp.ViewModels
         public MenuViewModel()
         {
             FillMenuItems();
-            SelectedMenu = new Models.Menus();
         }
 
 
@@ -29,53 +28,48 @@ namespace DemoApp.ViewModels
         }
 
 
-        private Menus selecteMenu;
-
-        public Menus SelectedMenu
-        {
-            get { return selecteMenu; }
-            set
-            {
-                selecteMenu = value;
-                OnPropertyChanged();
-            }
-        }
-
-
         private void FillMenuItems()
         {
             try
             {
-               
+
                 MenuList = new ObservableCollection<Menus>();
 
-              
                 MenuList.Add(new Menus
                 {
-                    Title = "Dashboard",
-                    IconSource = "",
-                    TargetType = typeof(DashboardPage),
-                });
-                MenuList.Add(new Menus
-                {
-
                     Title = "Report",
-                    IconSource = "",
-                    TargetType = typeof(Report),
-                });
-                MenuList.Add(new Menus
-                {
-                    Title = "Settings",
-                    IconSource = "",
-                    TargetType = typeof(Report),
-                });
-                MenuList.Add(new Menus
-                {
-                    Title = "Settings",
-                    IconSource = "",
-                    TargetType = typeof(Report),
-                });
+                    IconSource = "Report_Blue",
+                    TargetType = typeof(DashboardPage),
 
+                });
+                MenuList.Add(new Menus
+                {
+                    Title = "Money",
+                    IconSource = "MoneyBag_Blue",
+                    TargetType = typeof(DashboardPage),
+
+                });
+                MenuList.Add(new Menus
+                {
+                    Title = "Time line",
+                    IconSource = "Timeline_Blue",
+                    TargetType = typeof(DashboardPage),
+
+                });
+                MenuList.Add(new Menus
+                {
+                    Title = "Comments",
+                    IconSource = "Chat_Blue",
+                    TargetType = typeof(DashboardPage),
+
+                });
+                MenuList.Add(new Menus
+                {
+                    Title = "Connected",
+                    IconSource = "USBConnected_Color",
+                    TargetType = typeof(DashboardPage),
+
+                });
             }
             catch (Exception ex)
             {

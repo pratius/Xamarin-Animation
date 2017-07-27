@@ -7,7 +7,7 @@
                   <RowDefinition Height=".1*"/>
                   <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-            <SearchBar Placeholder="Search Name"  CancelButtonColor="Black" />
+            <SearchBar Placeholder="Search Name"  CancelButtonColor="Black" BackgroundColor="Transparent"/>
             <Grid Grid.Row="2" Padding="10">
              <ListView x:Name="LvMenuList" ItemsSource="{Binding ReportList}" >
             <ListView.ItemTemplate>

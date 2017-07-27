@@ -4,7 +4,7 @@
              x:Class="DemoApp.Views.MenusPage"
               Padding="0,40,0,0"
              Icon="Menu_button"
-             BackgroundColor="#3A4551" Title="Menu">
+             Title="Menu">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="MenuItem" TargetType="Image">
@@ -25,7 +25,7 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <ListView x:Name="LvMenuList" ItemsSource="{Binding MenuList}" AutomationId="lstMenu">
+        <ListView x:Name="LvMenuList" ItemsSource="{Binding MenuList}" AutomationId="lstMenu" BackgroundColor="Black">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

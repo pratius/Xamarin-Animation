@@ -13,15 +13,15 @@ namespace DemoApp
         public App()
         {
 
-<<<<<<< HEAD
+
             InitializeComponent();
             var navigationPage = new NavigationPage(new Views.SplashScreenPage());
            
             MainPage = navigationPage;
            
-=======
+
             MainPage =new NavigationPage(new SplashScreenPage());
->>>>>>> a30c6ad... dd
+
         }
 
     
