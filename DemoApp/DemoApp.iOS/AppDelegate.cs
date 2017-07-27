@@ -11,7 +11,7 @@ namespace DemoApp.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 			LoadApplication(new App());
-
+			XFGloss.iOS.Library.Init();
 			return base.FinishedLaunching(app, options);
 		}
 	}

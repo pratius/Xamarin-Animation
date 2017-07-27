@@ -2,7 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DemoApp.Views.DashboardPage" Title="Dashboard"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss" 
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView">
+    <!--  <xfg:ContentPageGloss.BackgroundGradient>
+
+        <xfg:Gradient Rotation="150">
+           <xfg:GradientStep StepColor="#03A9F4" StepPercentage="0" />
+            <xfg:GradientStep StepColor="#303F9F" StepPercentage="1" />
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>-->
     <ContentPage.Content>
     <Grid Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
          <Grid.RowDefinitions>
@@ -46,11 +54,10 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="0.6*" />
         </Grid.RowDefinitions>
-                    <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0" x:Name="buttonStack">
-             <StackLayout.GestureRecognizers>
-        <TapGestureRecognizer
-                Tapped="Handle_Tapped"
-                />
+           <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0" x:Name="buttonStack">
+            <StackLayout.GestureRecognizers>
+         <TapGestureRecognizer
+                Tapped="Handle_Tapped"/>
              </StackLayout.GestureRecognizers>
             <Image Source="Report_Blue.png" WidthRequest="50" HeightRequest="50" />
             <Label Text="Report" TextColor="Black" XAlign="Center" WidthRequest="100" HeightRequest="50" />

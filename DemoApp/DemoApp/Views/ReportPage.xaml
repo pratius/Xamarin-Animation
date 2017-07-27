@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoApp.Views.ReportPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+ xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoApp.Views.ReportPage">
+    <xfg:ContentPageGloss.BackgroundGradient>
+
+        <xfg:Gradient Rotation="150">
+            <xfg:GradientStep StepColor="#9C27B0" StepPercentage="0" />
+           <xfg:GradientStep StepColor="#E91E63" StepPercentage="1" />
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
 	<ContentPage.Content>
         <Grid>
              <Grid.RowDefinitions>
@@ -9,7 +18,7 @@
                 </Grid.RowDefinitions>
             <SearchBar Placeholder="Search Name"  CancelButtonColor="Black" BackgroundColor="Transparent"/>
             <Grid Grid.Row="2" Padding="10">
-             <ListView x:Name="LvMenuList" ItemsSource="{Binding ReportList}" >
+             <ListView x:Name="LvMenuList" ItemsSource="{Binding ReportList}" BackgroundColor="Transparent" >
             <ListView.ItemTemplate>
             <DataTemplate>
             <ViewCell>
@@ -32,7 +41,7 @@
                        Source="{Binding Image}"/>
                 <Label Grid.Column="1"
                        Text="{Binding Name}"
-                       VerticalOptions="End"/>
+                       VerticalOptions="End" TextColor="White"/>
                
               </Grid>
             </ViewCell>
